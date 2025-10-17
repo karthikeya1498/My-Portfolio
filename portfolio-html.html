@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karthikeya Vanakayalapati - Full-Stack Developer specializing in performance engineering and modern web technologies">
+    <meta name="keywords" content="Full-Stack Developer, WebAssembly, MERN Stack, Performance Engineering, C Programming">
+    <meta name="author" content="Karthikeya Vanakayalapati">
+    <meta property="og:title" content="Karthikeya Vanakayalapati | Full-Stack Developer">
+    <meta property="og:description" content="Performance-focused full-stack developer specializing in MERN stack and WebAssembly integration">
+    <meta property="og:type" content="website">
+    
+    <title>Karthikeya Vanakayalapati | Full-Stack Developer & Performance Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">KV</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link"><span class="nav-number">01.</span> Home</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-number">02.</span> About</a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-number">03.</span> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-number">04.</span> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting" data-aos="fade-up">
+                        <span class="wave">👋</span> Hi, I'm
+                    </div>
+                    <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
+                        Karthikeya<br>Vanakayalapati
+                    </h1>
+                    <div class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                        I craft high-performance web applications by bridging systems-level programming with modern full-stack architecture. Specializing in <span class="highlight">MERN stack</span>, <span class="highlight">WebAssembly</span>, and <span class="highlight">performance optimization</span>.
+                    </p>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Let's Connect</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-label">Commits</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <div class="profile-card">
+                            <div class="profile-image-wrapper">
+                                <!-- Replace 'your-photo.jpg' with your actual photo -->
+                                <img src="your-photo.jpg" alt="Karthikeya Vanakayalapati" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="profile-placeholder">KV</div>
+                            </div>
+                            <div class="profile-info">
+                                <h3>Karthikeya V.</h3>
+                                <p>Full-Stack Developer</p>
+                                <div class="profile-badges">
+                                    <span class="badge">C/C++</span>
+                                    <span class="badge">MERN</span>
+                                    <span class="badge">WASM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-orbit">
+                            <div class="orbit-item" style="--delay: 0s;">C</div>
+                            <div class="orbit-item" style="--delay: -2s;">JS</div>
+                            <div class="orbit-item" style="--delay: -4s;">React</div>
+                            <div class="orbit-item" style="--delay: -6s;">Node</div>
+                            <div class="orbit-item" style="--delay: -8s;">Mongo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">// About Me</span>
+                <h2 class="section-title">Bridging Performance & Innovation</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="lead">
+                        I'm a second-year Computer Science Engineering student at <strong>KL University Hyderabad</strong>, driven by a passion for creating high-performance web applications that make a difference.
+                    </p>
+                    <p>
+                        My journey started with <strong>C programming</strong>, which gave me a deep understanding of systems-level optimization and memory management. This foundation allows me to approach web development with a unique perspective—always thinking about performance, efficiency, and scalability.
+                    </p>
+                    <p>
+                        I specialize in the <strong>MERN stack</strong> (MongoDB, Express, React, Node.js) and love integrating cutting-edge technologies like <strong>WebAssembly</strong> to push the boundaries of what's possible in the browser. My goal is to build applications that are not just functional, but lightning-fast and delightful to use.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C14.17 2 16.16 2.71 17.77 3.92" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Performance-First Approach</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C14.17 2 16.16 2.71 17.77 3.92" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Systems-Level Expertise</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C14.17 2 16.16 2.71 17.77 3.92" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Modern Full-Stack Development</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="code-title">performance.c</div>
+                        </div>
+                        <div class="code-body">
+                            <pre><code><span class="code-comment">// Optimizing for speed</span>
+<span class="code-keyword">const</span> <span class="code-function">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Karthikeya'</span>,
+  <span class="code-property">role</span>: <span class="code-string">'Full-Stack Developer'</span>,
+  <span class="code-property">focus</span>: [<span class="code-string">'Performance'</span>, <span class="code-string">'Scalability'</span>],
+  <span class="code-property">stack</span>: [<span class="code-string">'C'</span>, <span class="code-string">'MERN'</span>, <span class="code-string">'WASM'</span>],
+  <span class="code-property">mindset</span>: <span class="code-string">'Innovation driven'</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">// Technical Arsenal</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">A comprehensive toolkit spanning from low-level systems programming to modern web frameworks</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Performance Engineering</h3>
+                    <p>Systems-level optimization and high-performance computing</p>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">C Language</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">WebAssembly</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Memory Management</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>Building beautiful, responsive user interfaces</p>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript ES6+</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5 & CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 92%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Scalable server-side architecture and APIs</p>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 82%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools & Practices</h3>
+                    <p>Modern development workflow and best practices</p>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">RESTful APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">// Portfolio Showcase</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">High-impact applications demonstrating performance optimization and full-stack expertise</p>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card featured" data-aos="fade-up">
+                    <div class="project-number">01</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag">🚀 Performance Engineering</span>
+                            <h3>WASM-Accelerated Image Processor</h3>
+                        </div>
+                        
+                        <p class="project-description">
+                            A high-performance client-side image manipulation utility that leverages WebAssembly for near-native speed processing. Implements advanced filtering algorithms compiled from C for optimal performance.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4>⚡ Challenge</h4>
+                                <p>Achieving real-time image filtering and compression directly in the browser without server dependency or JavaScript performance bottlenecks.</p>
+                            </div>
+                            
+                            <div class="detail-block">
+                                <h4>💡 Solution</h4>
+                                <p>Compiled optimized C image processing algorithms to WebAssembly using Emscripten, integrated via custom React hooks with progressive enhancement.</p>
+                            </div>
+                            
+                            <div class="detail-block">
+                                <h4>📊 Impact</h4>
+                                <p>Achieved <strong>70% faster processing</strong> compared to pure JavaScript, handling 10MB images in under 2 seconds with zero server load.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">WebAssembly</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Emscripten</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z" fill="currentColor"/>
+                                </svg>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visual">
+                        <div class="project-image-container">
+                            <div class="image-placeholder">
+                                <div class="placeholder-icon">🖼️</div>
+                                <p>Project Screenshot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-number">02</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag">💼 Full-Stack Development</span>
+                            <h3>Real-Time Collaborative Task Manager</h3>
+                        </div>
+                        
+                        <p class="project-description">
+                            A production-grade task management platform with real-time collaboration features, complex authentication, and scalable architecture for multi-user environments.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4>⚡ Challenge</h4>
+                                <p>Building a multi-user platform with real-time synchronization, complex data relationships, and secure authentication at scale.</p>
+                            </div>
+                            
+                            <div class="detail-block">
+                                <h4>💡 Solution</h4>
+                                <p>Architected using MERN stack with WebSocket integration for live updates, JWT authentication, and optimized MongoDB queries with proper indexing.</p>
+                            </div>
+                            
+                            <div class="detail-block">
+                                <h4>📊 Impact</h4>
+                                <p>Successfully handles <strong>100+ concurrent users</strong> with sub-200ms response times, featuring role-based access control and real-time notifications.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">WebSockets</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z" fill="currentColor"/>
+                                </svg>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visual">
+                        <div class="project-image-container">
+                            <div class="image-placeholder">
+                                <div class="placeholder-icon">📱</div>
+                                <p>Project Screenshot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">// Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-description">Open to collaboration, internship opportunities, and exciting projects</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:2410030403@klh.edu.in">2410030403@klh.edu.in</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <a href="tel:+916300519292">+91 6300519292</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🎓</div>
+                        <div class="info-content">
+                            <h3>Education</h3>
+                            <p>KL University Hyderabad</p>
+                            <p class="sub">Computer Science Engineering</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">KV</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </div>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Projects</h4>
+                        <a href="#projects">All Projects</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:2410030403@klh.edu.in">Email</a>
+                        <a href="tel:+916300519292">Phone</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karthikeya Vanakayalapati. All rights reserved.</p>
+                <p>Designed & Built with 💙 and ⚡</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
