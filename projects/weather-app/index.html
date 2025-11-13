@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Basic HTML Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <h1 class="title">🌤️ Weather App</h1>
+            
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..." 
+                    value="New York"
+                />
+                <button onclick="searchWeather()" class="search-btn">Search</button>
+            </div>
+            
+            <div class="weather-container" id="weatherContainer">
+                <div class="location">
+                    <h2 id="cityName">New York</h2>
+                    <p id="date">Monday, January 1, 2024</p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="temp">22</span>°C
+                    </div>
+                    <div class="weather-icon" id="weatherIcon">☀️</div>
+                    <div class="weather-description" id="description">Sunny</div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">💨</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="windSpeed">12 km/h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">💧</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">65%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">🌡️</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feelsLike">20°C</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">👁️</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Visibility</span>
+                            <span class="detail-value" id="visibility">10 km</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forecast">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-container" id="forecast"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Basic HTML Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>📝 My To-Do List</h1>
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="Add a new task..." />
+                <button onclick="addTodo()" id="addBtn">Add</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterTodos('all')">All</button>
+                <button class="filter-btn" onclick="filterTodos('active')">Active</button>
+                <button class="filter-btn" onclick="filterTodos('completed')">Completed</button>
+            </div>
+            <ul id="todoList" class="todo-list"></ul>
+            <div class="footer-info">
+                <span id="taskCount">0 tasks left</span>
+                <button onclick="clearCompleted()" class="clear-btn">Clear Completed</button>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
