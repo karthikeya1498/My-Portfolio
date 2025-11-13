@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | Basic HTML Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <h1 class="title">🕐 Digital Clock</h1>
+            <div class="clock">
+                <div class="time" id="time">00:00:00</div>
+                <div class="date" id="date">Monday, January 1, 2024</div>
+            </div>
+            <div class="timezone" id="timezone">Time Zone: UTC</div>
+            <div class="format-toggle">
+                <button class="toggle-btn" onclick="toggleFormat()">
+                    <span id="formatText">Switch to 12-hour</span>
+                </button>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App | Basic HTML Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-header">
+                <h1>🧠 Programming Quiz</h1>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="question-counter" id="questionCounter">Question 1 of 5</div>
+            </div>
+            
+            <div class="quiz-body" id="quizBody">
+                <h2 class="question" id="question">Loading question...</h2>
+                <div class="options" id="options"></div>
+            </div>
+            
+            <div class="quiz-footer">
+                <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+            </div>
+        </div>
+        
+        <div class="result-container hidden" id="resultContainer">
+            <div class="result-header">
+                <h1>🎉 Quiz Complete!</h1>
+            </div>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span class="score" id="score">0</span>
+                    <span class="score-total">/ 5</span>
+                </div>
+            </div>
+            <div class="result-message" id="resultMessage"></div>
+            <div class="result-actions">
+                <button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+                <a href="../../index.html" class="btn btn-secondary">Back to Portfolio</a>
+            </div>
+        </div>
+        
+        <div class="footer" id="footer">
+            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
